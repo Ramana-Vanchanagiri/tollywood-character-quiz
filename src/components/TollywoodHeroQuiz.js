@@ -50,12 +50,16 @@ const TollywoodHeroQuiz = () => {
     window.open(tweetUrl, '_blank');
   };
 
-  const shareGeneral = (hero) => {
+ const shareGeneral = (hero) => {
     if (navigator.share) {
       navigator.share({
         title: 'Tollywood Hero Quiz Result',
         text: `I got ${hero.name} - ${hero.title} in the Tollywood Hero Quiz!`,
+        url: 'https://tollywood-quiz.netlify.app/',
       });
+    } else {
+      // fallback if navigator.share is not supported
+      alert(`Share this link: https://tollywood-quiz.netlify.app/`);
     }
   };
 
