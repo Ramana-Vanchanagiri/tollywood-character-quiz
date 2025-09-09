@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Star, Trophy, Heart, Zap, Shield, Sparkles } from 'lucide-react';
+import { useState } from 'react';
+import { Star } from 'lucide-react';
 import { questions, heroes } from './QuizData';
 
 const TollywoodHeroQuiz = () => {
