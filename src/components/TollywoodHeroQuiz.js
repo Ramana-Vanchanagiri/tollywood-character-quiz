@@ -46,7 +46,11 @@ const TollywoodHeroQuiz = () => {
 
   const shareOnTwitter = (hero) => {
     const tweetText = `I got ${hero.name} - ${hero.title} in the Tollywood Hero Quiz! 🎬✨ Which Tollywood star are you?`;
-    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+    const quizUrl = 'https://tollywood-quiz.netlify.app/';
+    const hashtags = 'TollywoodQuiz,TeluguCinema,PersonalityQuiz';
+    
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(quizUrl)}&hashtags=${hashtags}`;
+    
     window.open(tweetUrl, '_blank');
   };
 
